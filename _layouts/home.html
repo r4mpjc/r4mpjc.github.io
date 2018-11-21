@@ -3,14 +3,27 @@
   <head>
     <title>Ramos &amp; Silva | Correspondente bancário</title>
 
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/countdown.js"></script>
   </head>
 
   <body>
 
-    <div>
-      <h2>Faltam <span id="launchTimer"></span> para o lançamento do site! </h2>
+    <div class="timer-wrap">
+      <strong><h2>Faltam <span id="launchTimer"></span> para o lançamento do site! </h2></strong>
+    </div>
+
+    <div class="form-wrap">
+        <form action="https://formspree.io/stedevai@email.fr" method="POST">
+          <h3>Entre em contato!</h3>
+          <input type="text" name="name" placeholder="Nome"><br>
+          <input type="email" name="_replyto" placeholder="E-mail"><br>
+          <input type="phone" name="telefone" placeholder="Telefone"><br>
+          <textarea name="message" placeholder="Mensagem"></textarea><br>
+          <input type="submit" value="Enviar">
+        </form> 
     </div>
 
     <script>

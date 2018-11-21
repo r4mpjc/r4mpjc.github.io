@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900')
+
+body
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+
+  font-family: 'Roboto', sans-serif
+
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+
+  background-color: #555
+  background-image: url('../img/office-865091_1280.jpg')
+
+.timer-wrap
+  grid-column: 1 / 4
+  display: flex
+  align-items: center
+
+  h2
+    color: white
+    text-align: center
+    font-size: 56px
+    font-weight: 900
+    margin: 0 30px
+    
+
+.form-wrap
+  grid-column: 4 / -1
+  display: flex
+  align-items: center
+
+  h3
+    width: 100%
+    font-size: 35px
+    text-align: center
+    color: #555
+
+  input, textarea
+    width: 100%
+
