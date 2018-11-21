@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ramos &amp; Silva | Correspondente bancário</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/countdown.js"></script>
+  </head>
+
+  <body>
+
+    <div>
+      <h2>Faltam <span id="launchTimer"></span> para o lançamento do site! </h2>
+    </div>
+
+    <script>
+      countdown.setLabels(
+        ' milissegundo| segundo| minuto| hora| dia| semana| mês| ano| década| século| milênio',
+        ' milissegundos| segundos| minutos| horas| dias| semanas| meses| anos| décadas| séculos| milênios',
+        ' e ',
+        ', ',
+        'agora');
+
+      $(document).ready(function(){
+
+        var launch_date = new Date(2018, 10, 28);
+        var count = countdown(launch_date, function(ts) {
+          $('#launchTimer').html(ts.toString());
+        });
+      });
+    </script>
+
+  </body>
+</html>
