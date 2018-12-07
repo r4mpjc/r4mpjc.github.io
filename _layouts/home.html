@@ -11,20 +11,72 @@
 
   <body>
 
-    <div class="timer-wrap">
-      <strong><h2>Faltam <span id="launchTimer"></span> para o lançamento do site da Ramos&amp;Silva! </h2></strong>
-    </div>
+		<section class="cronom">
+			<div class="wrapc">
+				<h2 style="margin-top: 0;">EM BREVE, UM NOVO SITE PARA <strong>VOCÊ<br>SE RELACIONAR COM A GENTE.</strong></h2>
 
-    <div class="form-wrap">
-        <form action="https://formspree.io/stedevai@email.fr" method="POST">
-          <h3>Entre em contato!</h3>
-          <input type="text" name="name" placeholder="Nome"><br>
-          <input type="email" name="_replyto" placeholder="E-mail"><br>
-          <input type="phone" name="telefone" placeholder="Telefone"><br>
-          <textarea name="message" placeholder="Mensagem"></textarea><br>
-          <input type="submit" value="Enviar">
-        </form> 
-    </div>
+				<div class="timer-wrap">
+					<strong><h2>FALTAM<br>
+							{% comment %}<span id="launchTimer"></span>{% endcomment %}
+
+							<div class="counter-numbers">
+
+								<div class="numd dc">
+									<span id="dias"></span>
+									<br>
+									<span>dias</span>
+								</div>
+
+								<div class="numd dh">
+									<span id="horas"></span>
+									<br>
+									<span>horas</span>
+								</div>
+
+								<div class="numd dm">
+									<span id="minutos"></span>
+									<br>
+									<span>minutos</span>
+								</div>
+
+								<div class="numd ds">
+									<span id="segundos"></span>
+									<br>
+									<span>segundos</span>
+								</div>
+
+							</div>
+
+							<br>PARA O LANÇAMENTO.</h2></strong>
+				</div>
+			</div>
+		</section>
+
+		<section class="form-section">
+			<div class="wrap-form">
+				<div class="form-text">
+					<h2 style="margin-top: 0;">Atendimento Personalizado</h2>
+					<p>Enquanto nosso site é reestruturado, você pode ser atendido por um consultor autorizado da Ramos &amp; Silva.</p>
+					<p>Empresa com mais de 13 anos de experiência</p>
+					<p>Segurança e praticidade</p>
+					<p>Compromisso com o cliente</p>
+					<p style="margin-bottom: 45px;">Solução ágil para o que precisa</p>
+					<span class="button">Solicite uma proposta!</span>
+				</div>
+
+				<div class="form-wrap">
+						<form action="https://formspree.io/stedevai@email.fr" method="POST">
+							<h3>Fale com a gente</h3>
+							<input type="text" name="name" placeholder="Nome"><br>
+							<input type="email" name="_replyto" placeholder="E-mail"><br>
+							<input type="phone" name="telefone" placeholder="Telefone"><br>
+							<input type="text" name="assunto" placeholder="Assunto"><br>
+							<textarea name="message" placeholder="Mensagem"></textarea><br>
+							<input type="submit" value="Quero ser atendido">
+						</form> 
+				</div>
+			</div>
+		</section>
 
     <script>
       countdown.setLabels(
@@ -35,10 +87,14 @@
         'agora');
 
       $(document).ready(function(){
-
         var launch_date = new Date(2018, 10, 28);
         var count = countdown(launch_date, function(ts) {
           $('#launchTimer').html(ts.toString());
+
+					$('#dias').html(ts.days);
+					$('#horas').html(ts.hours);
+					$('#minutos').html(ts.minutes);
+					$('#segundos').html(ts.seconds);
         });
       });
     </script>
