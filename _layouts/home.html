@@ -72,6 +72,7 @@
 				</div>
 
 				<div class="form-wrap">
+						{% comment %}<form action="https://formspree.io/contato@ramosilva.com.br" method="POST">{% endcomment %}
 						<form action="https://formspree.io/contato@ramosilva.com.br" method="POST">
 							<h3>Fale com a gente</h3>
 							<input type="text" name="name" placeholder="Nome"><br>
@@ -79,6 +80,7 @@
 							<input type="phone" name="telefone" placeholder="Telefone"><br>
 							<input type="text" name="assunto" placeholder="Assunto"><br>
 							<textarea name="message" placeholder="Mensagem"></textarea><br>
+							<input type="hidden" name="_next" value="/obrigado"/>
 							<input type="submit" value="Quero ser atendido">
 						</form> 
 				</div>
@@ -100,7 +102,7 @@
         'agora');
 
       $(document).ready(function(){
-        var launch_date = new Date(2019, 1, 7);
+        var launch_date = new Date(2019, 1, 14);
         var count = countdown(launch_date, function(ts) {
           $('#launchTimer').html(ts.toString());
 
